@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="map-container">
+        <img src="recursos/mapa_base.jpeg" alt="Mapa del Reino" usemap="#mapa-reino">
+        <map name="mapa-reino">
+            <area shape="circle" coords="896,494,193" alt="Castillo" onclick="mostrarImagen('recursos/castillo.jpg')">
+            <area shape="rect" coords="185,504,295,418" alt="Bosque" onclick="mostrarImagen('recursos/bosque.jpg')">
+            <area shape="circle" coords="416,303,81" alt="Cohorte Tierra" onclick="mostrarImagen('recursos/cohorte_tierra.jpg')">
+            <area shape="circle" coords="751,158,73" alt="Cohorte Agua" onclick="mostrarImagen('recursos/cohorte_agua.jpeg')">
+            <area shape="circle" coords="1437,609,121" alt="Cohorte Fuego" onclick="mostrarImagen('recursos/cohorte_fuego.jpg')">
+            <area shape="circle" coords="1151,324,76" alt="Cohorte Aire" onclick="mostrarImagen('recursos/cohorte_aire.jpg')">
+            <area shape="circle" coords="1475,299,106" alt="Cohorte Oscuridad" onclick="mostrarImagen('recursos/cohorte_oscuridad.jpg')">
+            <area shape="circle" coords="300,648,71" alt="Cohorte Luz" onclick="mostrarImagen('recursos/cohorte_luz.jpg')">
+            <area shape="circle" coords="556,742,76" alt="Citadel" onclick="mostrarImagen('recursos/citadel.jpg')">
+        </map>
+    </div>
+
+    <div id="imagen-desplegable" class="overlay">
+        <span class="close" onclick="cerrarImagen()">&times;</span>
+        <img class="overlay-content" id="imagen-mostrar">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
